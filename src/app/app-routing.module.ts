@@ -6,9 +6,9 @@ const routes: Routes = [
     {
         path: 'article/:repo',
         component: ArticleComponent,
-        /*resolve: {
+        resolve: {
             article: ArticleResolver
-        }*/
+        }
     },
     {
         path: "**",
