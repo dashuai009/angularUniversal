@@ -2,26 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
-## Development server
+## app.component
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+这里有几个链接，指向github上的一些readme文档
 
-## Code scaffolding
+## service
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+该服务会请求这些readme文档
 
-## Build
+## article.component
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+该模块会进行md解析。文档解析是在前端解析的，浏览器处理dom，插入标签会非常的慢。
 
-## Running unit tests
+下图是我在本地（`ng s -o`）进行的测试，`Largest Contentful Paint`会非常慢。在正常服务器环境下，考虑到网速等问题，Performance得分会更低。
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![示意图](src/assets/2021-05-15%2017-45-28%20的屏幕截图.png)
