@@ -13,7 +13,7 @@ import { GetMDService } from './services/get-md.service';
     ArticleComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule
   ],
