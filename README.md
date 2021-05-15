@@ -4,8 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## 参考链接
 
-![angular universal](https://angular.cn/guide/universal)
-![Angular Universal: a Complete Practical Guide](https://blog.angular-university.io/angular-universal/)
+[angular universal](https://angular.cn/guide/universal)
+[Angular Universal: a Complete Practical Guide](https://blog.angular-university.io/angular-universal/)
 
 ## 添加angular universal
 
