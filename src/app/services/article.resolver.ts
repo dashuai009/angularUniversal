@@ -75,9 +75,9 @@ export class ArticleResolver implements Resolve<any> {
         if (this.transferState.hasKey(ARTICLE_KEY)) {
 
             const course = this.transferState.get<String>(ARTICLE_KEY, null);
-            if (isPlatformBrowser(this.platformId)) {//只有在浏览器端才删除记录
+            //if (isPlatformBrowser(this.platformId)) {//只有在浏览器端才删除记录
                 this.transferState.remove(ARTICLE_KEY);
-            }
+            //}
             return of(course);
         }
         else {
@@ -85,11 +85,14 @@ export class ArticleResolver implements Resolve<any> {
                 .pipe(
                     first(),
                     tap(res => {
-                        const tmp = {
+                        if(isPlatformServer(this.platformId)){
+                            const tmp = {
                             data: this.getHtml(res["content"]),
                             title: "repoName"
                         }
                         this.transferState.set(ARTICLE_KEY, tmp);//添加记录（key，value）
+                        }
+                        
                     })
                 )
         }
